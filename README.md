@@ -31,25 +31,34 @@ dc-cli configure --clientId <yourClientId> --clientSecret <yourSecret> --hubId <
 
 ## Steps - Export
 
-1. Open cmd, go to particual folder location
-2. Export Content type schema
+1. Open cmd, go to particular folder location
+2. Configure amplience 
+```bash
+dc-cli configure --clientId <clientId(User A)> --clientSecret <clientSecret(User A)> --hubId <hubId(User A)>
+```
+3. Export Content type schema
 ```bash
 dc-cli content-type-schema export <dir>
 ```
-3. Export Content type
+4. Export Content type
 ```bash
 dc-cli content-type export <dir>
 ```
 
 ## Steps - Import
 
-1. Import Content type schema
+1. Configure amplience 
 ```bash
-dc-cli content-type-schema import folderName --hubId <dstHubId>
+dc-cli configure --clientId <clientId(User B)> --clientSecret <clientSecret(User B)> --hubId <hubId(User B)>
 ```
+2. Import Content type schema
+```bash
+dc-cli content-type-schema import folderName --hubId <hubId(User B)>
+```
+
 3. Import Content type
 ```bash
-dc-cli content-type import folderName --hubId <dstHubId>
+dc-cli content-type import folderName --hubId <hubId(User B)>
 ```
 
 
