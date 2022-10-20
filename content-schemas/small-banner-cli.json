@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://kibo-examples.com/small-banner-cli",
+    "title": "Simple banner",
+    "description": "A simple text banner with a call to action used primarily in a page header",
+    "$comment": "Docs: https://amplience.com/docs/development/schema-examples/tutorials/banner.html",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "propertyOrder": [
+        "title",
+        "subtitle",
+        "backgroundColor",
+        "callToActionText",
+        "callToActionUrl"
+    ],
+    "type": "object",
+    "properties": {
+             "backgroundColor": {
+     "title": "Banner background color",
+            "description": "The color of the background of this banner (hex or css color name)",
+  
+            "format": "color",
+            "type": "string"
+        },
+        "title": {
+            "title": "Headline",
+            "description": "The main title of this banner",
+            "type": "string",
+            "format": "text",
+            "minLength": 5,
+            "maxLength": 256
+        },
+        "subtitle": {
+            "title": "Strapline",
+            "description": "The subtitle for this banner",
+            "type": "string",
+            "format": "text",
+            "maxLength": 256
+        },
+        "callToActionText": {
+            "title": "Call to action text",
+            "description": "The text you want displayed with the call to action",
+            "type": "string",
+            "format": "text",
+            "maxLength": 256
+        },
+        "callToActionUrl": {
+            "title": "Call to action URL",
+            "description": "The URL for the call to action",
+            "type": "string",
+            "format": "text",
+            "maxLength": 256
+        }
+   
+    }
+}
