@@ -18,7 +18,7 @@ This is a repo containing Amplience Content Types and Schemas used in KiboCommer
 1. CLI installed on your machine: npm install -g @amplience/dc-cli
 2. Clone github repository
 ```bash
-git clone https://github.com/KiboSoftware/amplience-cli.git
+git clone https://github.com/KiboSoftware/amplience-demo-data.git
 ```
 3. The CLI tool contains a lot of documentation built in to help you use each command. To get help type the following into the command line:
 ```bash
